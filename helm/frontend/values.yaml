@@ -1,5 +1,5 @@
 # Replica 설정
-replicaCount: 2
+replicaCount: 1
 
 # 이미지 설정
 image:
@@ -13,14 +13,13 @@ service:
   type: ClusterIP
   port: 80
 
-# Resource Limit
 resources:
   limits: # 컨테이너가 사용할 수 있는 최대 리소스.
     cpu: "500m"
-    memory: "256Mi"
+    memory: "512Mi"
   requests: # 컨테이너가 사용할 수 있는 최소 리소스.
     cpu: "250m"
-    memory: "128Mi"
+    memory: "256Mi"
 
 # Pod Scheduling
 nodeSelector: {}

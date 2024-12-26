@@ -11,11 +11,11 @@ service:
 
 resources:
   limits:
-    cpu: "500m"
-    memory: "512Mi"
-  requests:
     cpu: "250m"
-    memory: "256Mi"
+    memory: "1000Mi"
+  requests:
+    cpu: "125m"
+    memory: "500Mi"
 
 nodeSelector: {}
 tolerations: []
@@ -25,3 +25,13 @@ updateStrategy:
   rollingUpdate:
     maxUnavailable: 1 # 업데이트 중 비활성화 가능한 최대 Pod 수 (절대값 또는 퍼센트)
     maxSurge: 1        # 업데이트 중 생성 가능한 추가 Pod 수 (절대값 또는 퍼센트)
+
+# Pod Scaling
+hpa:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 5
+  cpu:
+    targetUtilizationPercentage: 70
+  memory:
+    targetUtilizationPercentage: 70

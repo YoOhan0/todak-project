@@ -6,7 +6,7 @@ metadata:
   labels:
     app: {{ .Chart.Name }}
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: {{ if .Values.hpa.enabled }}null{{ else }}{{ .Values.replicaCount }}{{ end }}
   strategy:
     type: RollingUpdate
     rollingUpdate:
