@@ -16,6 +16,13 @@
  <img src="https://github.com/user-attachments/assets/df98cbc1-3338-4f58-a7a4-33d5f06e18de" width="50%" height="50%" />
 </div>
 
+## → 😋 팀원 소개
+
+<div align="center">
+ <img src="https://github.com/user-attachments/assets/39bb8df2-b234-45b2-ba97-2b08100a2dc1" width="70%" height="50%" />
+</div>
+
+
 ## → 📜 Page Graph
 <div align="center">
  <img src="https://github.com/user-attachments/assets/50267b06-a5ec-4c48-af32-18e12f2e8ce4" width="70%" height="50%" />
@@ -29,7 +36,9 @@
 
 ### <Cloud Stack & Main Feature>
 
-![19조 Todak 클라우드 설계.jpg](https://github.com/user-attachments/assets/8e8047dd-a083-42f8-b207-886344d227cb)
+<div align="center">
+ <img src="https://github.com/user-attachments/assets/8e8047dd-a083-42f8-b207-886344d227cb" width="70%" height="50%" />
+</div>
 
 - **Infra As a Code by Terraform** **(IaC)**
     - 테라폼을 활용하여 클라우드 리소스를 띄움으로써 리소스 관리를 효율적으로 하고자 하였고, 사용 지 않을 때는 리소스를 내림으로써 비용 최적화를 추구하였습니다.
@@ -61,8 +70,10 @@
             
         4. Github Action Dispatch 활용하여, 이미지 각 Repo에서 생성 시 Cloud Repo로 전파하여, **Helm Chart 기반 배포** 수행 (CD)
             
-            ![cd.png](https://github.com/user-attachments/assets/02cd16e3-4ac6-430d-9461-d527352b14fd)
-            
+            <div align="center">
+               <img src="https://github.com/user-attachments/assets/02cd16e3-4ac6-430d-9461-d527352b14fd" width="70%" height="50%" />
+            </div>
+
 
 - **AWS EKS + Cloud platform**
     - Container 기술인 **Kubernetes**와 **AWS 클라우드 서비스**를 활용함으로써 **고가용성**, **보안성, 성능, 내구성**을 갖춘 인프라를 구축하고자 하였습니다.
