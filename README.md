@@ -34,7 +34,9 @@
 - **Infra As a Code by Terraform** **(IaC)**
     - 테라폼을 활용하여 클라우드 리소스를 띄움으로써 리소스 관리를 효율적으로 하고자 하였고, 사용 지 않을 때는 리소스를 내림으로써 비용 최적화를 추구하였습니다.
         
-        ![스크린샷 2024-12-26 오후 11.30.14.png](https://github.com/user-attachments/assets/78bcf0a3-841d-45ae-b683-e40937249a0b)
+        <div align="center">
+           <img src="https://github.com/user-attachments/assets/78bcf0a3-841d-45ae-b683-e40937249a0b" width="30%" height="30%" />
+        </div>
         
 - **Various Use of Github Action (CI/CD)**
     - Github Action을 최대한 활용함으로써, DevOps 과정에서의 **효율화**와 **협업 간편화**를 추구하였습니다.
