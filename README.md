@@ -1,240 +1,291 @@
-## → 🌝 프로젝트 개요
+# 🚀 클라우드 네이티브 인프라 구축 프로젝트
 
-현재 시대의 SNS에서 **물질적 과시**가 만연한 상황과 이로 인해 발생하는 **다양한 문제점들**(낮은 자존감 및 끊임없는 자기비교)을 주목했습니다.
-
-**'우리의 행복은 우리가 가진 것이 아니라, 우리의 존재 그 자체에서 나온다'**는 컨셉을 모티브 삼아서 **자신의 내면**과 **창의성**을 표현하도록 장려하며 건강한 SNS 분위기를 조성하는 목적으로 해당 프로젝트를 기획하게 되었습니다.
-
-해당 앱의 **대표적인 기능**은 다음과 같습니다.
-
-1. 프로필을 설정하면, 개인 맞춤 **아바타** 생성. (아바타는 웹툰 생성에 활용)
-2. 일기 작성 그에 대한 **AI 위로 코멘트**
-3. 일기 기반 **웹툰 및 음악** 생성 (음악 장르 선택 가능)
-4. 일기 **공유** 서비스 (익명 보장)
-5. 유저 콘텐츠 **리액션**
+## 📋 프로젝트 개요
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/df98cbc1-3338-4f58-a7a4-33d5f06e18de" alt="프로젝트 개요" style="max-width: 100%; height: auto;">
+  <img src="https://github.com/user-attachments/assets/23387b63-6b8c-43ef-ace0-8e07f2d4ef69" alt="프로젝트 개요" style="max-width: 100%; height: auto;">
 </div>
 
-## → 😋 팀원 소개
+현재 시대의 SNS에서 **물질적 과시**가 만연한 상황과 이로 인해 발생하는 **다양한 문제점들**(낮은 자존감 및 끊임없는 자기비교)을 주목하여, **우리의 행복은 우리가 가진 것이 아니라, 우리의 존재 그 자체에서 나온다**는 컨셉을 모티브로 한 건강한 SNS 플랫폼을 구축했습니다.
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/39bb8df2-b234-45b2-ba97-2b08100a2dc1" alt="팀원 소개" style="max-width: 100%; height: auto;">
-</div>
+### 🎯 주요 기능
+- 개인 맞춤 **아바타** 생성 (웹툰 생성에 활용)
+- 일기 작성 및 **AI 위로 코멘트**
+- 일기 기반 **웹툰 및 음악** 생성 (음악 장르 선택 가능)
+- 일기 **공유** 서비스 (익명 보장)
+- 유저 콘텐츠 **리액션**
 
-## → 📜 Page Graph
+### 📜 Page Graph
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/50267b06-a5ec-4c48-af32-18e12f2e8ce4" alt="Page Graph" style="max-width: 100%; height: auto;">
 </div>
 
-## → 😎 나의 역할
-
-**클라우드 네이티브**를 기반으로 한, 프로젝트의 인프라를 담당하였습니다.
-
-### Cloud Stack & Main Feature
+## 😋 팀원 소개
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/8e8047dd-a083-42f8-b207-886344d227cb" alt="Cloud Stack" style="max-width: 100%; height: auto;">
+  <img src="https://github.com/user-attachments/assets/39bb8df2-b234-45b2-ba97-2b08100a2dc1" alt="팀원 소개" style="max-width: 100%; height: auto;">
 </div>
 
-#### Infra As a Code by Terraform (IaC)
+## ⚙️ 나의 역할
 
-**테라폼**을 활용하여 클라우드 리소스를 띄움으로써 리소스 관리를 코드로써 효율적으로 하고자 하였고, 사용하지 않을 때는 리소스를 내림으로써 비용 최적화를 추구하였습니다.
+저는 이 프로젝트에서 **클라우드 네이티브**를 기반으로 하여, 크게 **2가지 핵심 요소**를 고려한 인프라를 구축했습니다:
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/78bcf0a3-841d-45ae-b683-e40937249a0b" alt="Terraform" style="max-width: 500px; height: auto;">
-</div>
+### 🎯 인프라 설계 목표
 
-#### Various Use of Github Action (CI/CD)
+#### 1. 현대 시대 대응
+- **대규모성**: 증가하는 트래픽에 대응할 수 있는 확장 가능한 아키텍처
+  - MSA 아키텍처 적용으로 서비스별 독립적 확장
+  - Docker와 Kubernetes를 활용한 컨테이너 오케스트레이션
 
-Github Action을 최대한 활용함으로써, DevOps 과정에서의 **효율화**와 **협업 간편화**를 추구하였습니다.
+- **효율성**: 빠른 개발 사이클과 신속한 서비스 배포
+  - DevOps 문화 도입으로 개발과 운영의 통합
+  - GitHub Actions, Terraform, Prometheus, Grafana 기술 스택 활용
 
-프로젝트 형상 관리 도구로 **Github**을 사용하였고, **반복해서 사용**하는 Github Action 코드들을 **.github Repo에 모아 재활용** 할 수 있었기 때문에 편리하다고 생각하여 CI/CD 도구로 Github Action을 선택하게 되었습니다.
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/e8588a67-4823-4477-bf5e-384d80c9945a" alt="Github Action" style="max-width: 100%; height: auto;">
-</div>
-
-**활용 방식**
-
-1. **Github 작업 내용 Discord로 전달 (협업 강화)**
-   
-   <div align="center">
-     <img src="https://github.com/user-attachments/assets/f1f3e91e-a6a9-4f96-8bb8-de1d7c1e93dd" alt="Discord 연동" style="max-width: 600px; height: auto;">
-   </div>
-
-2. **GitHub Issue와 Jira 티켓 연동 (업무 효율화)**
-   
-   <div align="center">
-     <img src="https://github.com/user-attachments/assets/71e4a893-d58e-4d3a-b1ee-d8600b2a0706" alt="Jira 연동" style="max-width: 100%; height: auto;">
-   </div>
-
-3. **Dev,Main 브랜치에 Push 시 GHCR에 도커 이미지 저장 (CI)**
-   
-   <div align="center">
-     <img src="https://github.com/user-attachments/assets/6dc5007d-7511-463b-bc0b-62ae39f72d69" alt="Docker 이미지 저장" style="max-width: 100%; height: auto;">
-   </div>
-
-4. **Github Action Dispatch 활용하여, 이미지 각 Repo에서 생성 시 Cloud Repo로 전파하여, Helm Chart 기반 배포 수행 (CD)**
-   
-   <div align="center">
-     <img src="https://github.com/user-attachments/assets/02cd16e3-4ac6-430d-9461-d527352b14fd" alt="Helm Chart 배포" style="max-width: 100%; height: auto;">
-   </div>
-
-#### AWS EKS + Cloud platform
-
-Container 기술인 **Kubernetes**와 **AWS 클라우드 서비스**를 활용함으로써 **고가용성**, **보안성, 성능, 내구성**을 갖춘 인프라를 구축하고자 하였습니다.
-
-**High Availability**
-- **다중 AZ** 인프라 구조 적용
-- Deployment Resource의 **RollingUpdate** 전략을 사용하여, 버전 업데이트 관련 **무중단 배포 적용**
-- HPA와 Cluster Autoscaler Resource를 활용하여, 트래픽 증가시 **Pod, Node Scaling 적용**
-
-**HPA (Pod Scheduling)**
-
-Deployment Resource에 **Horizontal Pod AutoScaler (HPA)를 적용**하여 특정 리소스 기준을 넘었을 시 **자동으로 Pod의 수가 늘어나도록** 설정하였습니다.
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/af4fbf65-a3ad-49a9-a036-04ab06cfe4fb" alt="HPA 설정" style="max-width: 100%; height: auto;">
-</div>
-
-**Cluster-AutoScaler (Node Scheduling)**
-
-**Kubernetes와 AWS IAM을 통합**하여 Cluster Autoscaler Pod가 **AWS 리소스(ASG)에 액세스 할 권한을 부여**하게끔 IAM 정책과 Service Account를 생성하고 이를 기반으로 **Cluster AutoScaler**를 실행하여 Node 스케줄링이 되도록 하였습니다.
-
-**Before:**
-HPA에 의해 Deployment Object의 최대 Pod수(8)에 도달 했을 때, 몇몇 Pod에서 Memory Issue가 발생해 **정상적으로 실행되지 못했습니다**.
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/356278f3-6b00-4a7e-a376-7105800158ba" alt="Before 상태" style="max-width: 100%; height: auto;">
-</div>
-
-**After:**
-HPA에 의해 Deployment Object의 최대 Pod수(8)에 도달 하더라도, 적절하게 노드가 추가되어 모든 Pod가 **정상적으로 실행 되는 것을 확인** 할 수 있었습니다.
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/31bedd3e-c824-4625-8557-4283371f35f9" alt="After 상태" style="max-width: 100%; height: auto;">
-</div>
-
-**Security**
-- S3 저장소에 Presigned URL을 적용하여 일정 시간만 컨텐츠에 접근 할 수 있게 함으로써 **불필요한 접근 및 DDOS 방지**
-- AWS Secret Manager를 활용하여, 쿠버네티스에서 활용하는 **중요한 환경변수들에 대한 안전한 관리** 적용
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/24c14e1c-70ae-48d0-a611-0197246f89bd" alt="Security 설정" style="max-width: 100%; height: auto;">
-</div>
-
-- Let's Encrypt CA 기반의 **SSL/TLS 인증서 발급 및 적용**의 자동화
-
-**Performance**
-- RDS Read Replica 기능 활용하여 비동기적으로 읽기 전용 복제본을 생성함으로써, 기본 **인스턴스의 부하를 줄이고** 동시에 **데이터 복원 옵션**으로 활용
-- 99.999999999의 내구성을 보장하는 S3 저장소를 사용하고 이를 Origin으로 하는 CloudFront 기능을 활용하여 컨텐츠를 캐싱함으로써 **비용 및 성능 최적화**를 추구
+#### 2. 인프라 핵심 특성
+- **고가용성 (High Availability)**: 서비스 중단 최소화
+- **보안성 (Security)**: 데이터와 시스템 보호
+- **성능 (Performance)**: 최적화된 응답 시간과 처리량
 
 ---
 
-### Cloud Architecture
+## 🏗️ 현대적 인프라 아키텍처
+
+### 📊 전체 아키텍처 개요
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/aeb1666c-8a9b-438b-ac2c-ffb03183c8c5" alt="Cloud Architecture" style="max-width: 100%; height: auto;">
+  <img src="https://github.com/user-attachments/assets/104e6efe-d6d9-4f70-8f21-57acc9bb4390" alt="현대적 인프라 개요" style="max-width: 100%; height: auto;">
 </div>
 
-해당 프로젝트에서 사용한 클라우드 아키텍쳐 구조입니다.
+### 🔄 1. MSA 아키텍처 및 CI/CD Pipeline
 
-Container Orchestration 도구인 **쿠버네티스**를 활용한 AWS EKS 서비스 기반의 클라우드 아키텍쳐를 구성하였습니다.
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/d25c4814-118b-47e8-a9dd-b5d610c1d650" alt="MSA 및 CI/CD" style="max-width: 100%; height: auto;">
+</div>
 
-- **다중 AZ**와 **NAT 게이트웨이를 각 AZ 마다 구성**하여 재해 및 문제 상황에서 **가용성**을 보장하고자 하였습니다.
-- **Auto Scaling Group(ASG)**으로 인스턴스를 관리하여, **늘어나는 트래픽에 대응** 될 수 있도록 하였습니다.
-- **노드 그룹**을 **Private subnet**에 배치 시키고, 같은 VPC에 있는 **Bastion Host**에서의 SSH 22번 InBound 포트만 허용함으로써, 접근에 대한 **보안성**을 높이고자 하였습니다.
+#### 🏛️ MSA 아키텍처 구성
+- **라우팅 전략**
+  - 도메인 기반: 개발환경(dev.todaktodak.site) / 운영환경(todaktodak.site)
+  - 경로 기반: Frontend(/), Backend(/api), AI 서비스 분리
+
+- **서비스 분할**
+  - Frontend: React 기반 사용자 인터페이스
+  - Backend: Spring Boot API 서버
+  - AI Services: 코멘트 생성, 웹툰 생성, BGM 생성
+
+#### 🔄 CI/CD Pipeline
+GitHub Actions를 활용한 **완전 자동화된 배포 파이프라인** 구축:
+
+**1. 협업 강화**
+- GitHub 작업 내용을 **Discord로 실시간 전달**
+- 팀원 간 투명한 작업 현황 공유
+
+**2. 업무 효율화**
+- **GitHub Issue**와 **Jira 티켓** 연동
+- 통합된 이슈 트래킹 시스템 구축
+
+**3. 지속적 통합 (CI)**
+- Dev, Main 브랜치 Push 시 GHCR에 **도커 이미지 자동 저장**
+- 코드 품질 관리 및 배포 준비 자동화
+
+**4. 지속적 배포 (CD)**
+- GitHub Action Dispatch 활용
+- 각 Repository에서 이미지 생성 시 Cloud Repository로 전파
+- **Helm Chart 기반 자동 배포** 수행
+
+### 🛠️ 2. IaC(Terraform) 및 모니터링 시스템
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/a077faf9-5f1f-4309-9202-95a56149f420" alt="IaC 및 모니터링" style="max-width: 100%; height: auto;">
+</div>
+
+#### 📝 Infrastructure as Code (IaC)
+**Terraform**을 활용한 선언적 인프라 관리:
+
+- **코드 기반 인프라 관리**
+  - 모든 클라우드 리소스를 코드로 정의
+  - Git을 통한 인프라 버전 관리
+  - 환경별(dev/prod) 일관된 배포
+
+- **비용 최적화**
+  - 사용하지 않을 때 리소스 자동 해제
+  - 리소스 사용량 추적 및 최적화
+
+- **재현 가능성**
+  - 동일한 환경을 언제든 재구축 가능
+  - 장애 복구 시간 단축
+
+#### 📊 모니터링 및 관찰 가능성
+**Prometheus + Grafana** 스택을 활용한 종합 모니터링 시스템:
+
+**실시간 메트릭 수집**
+- Kubernetes 클러스터 상태 모니터링
+- Pod 및 Node 리소스 사용량 추적
+
+**시각화 및 대시보드**
+- Grafana를 통한 직관적인 메트릭 시각화
+
+**알림 시스템**
+- 임계값 기반 자동 알림
+- 이메일/Slack 통합 알림
 
 ---
 
-### Kubernetes Architecture & Feature
+## ⚡ 인프라 특성 구현
+
+### 🔄 고가용성 (High Availability)
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/729d52ef-4ca2-48b0-a102-6ceea8103381" alt="Kubernetes Architecture" style="max-width: 100%; height: auto;">
+  <img src="https://github.com/user-attachments/assets/b3aab2b4-739f-4e28-95f0-6c690bc984be" alt="고가용성 구현" style="max-width: 100%; height: auto;">
 </div>
 
-**AWS Route53 서비스를 활용한 도메인 관리**
+#### 🌍 Multi-AZ 구성
+- 재해 및 장애 상황에 대한 **자동 복원력** 확보
+- 각 AZ별 NAT Gateway 구성으로 단일 장애점 제거
 
-가비아에서 도메인을 구입하여 AWS Route 53에서 관리하는 방식으로 dev 서비스, prod 서비스, 데이터베이스, 캐시 서버에 대해 각각 **고정 도메인을 부여**하여 Terraform을 통해 리소스를 내렸다올렸을 때의 공용 IP 변경에 대해 적은 변경만으로 앱을 운영할 수 있도록 하였습니다.
+#### 🔄 무중단 배포
+- Deployment Resource의 **RollingUpdate** 전략 사용
+- 서비스 중단 없는 버전 업데이트
+- Health Check 기반 안전한 배포
+
+#### 📈 자동 스케일링
+- **HPA (Horizontal Pod Autoscaler)**: CPU/Memory 기준 Pod 수 자동 조정
+- **Cluster Autoscaler**: 리소스 부족 시 Node 수 자동 증설
+- 트래픽 증가 시 **탄력적 대응**으로 성능 유지
+
+**스케일링 효과 검증:**
+- **Before**: Pod 수 제한으로 인한 Memory Issue 발생 → 서비스 불안정
+- **After**: 노드 자동 추가로 모든 Pod 정상 실행 → 안정적 서비스 제공
+
+### 🔒 보안성 (Security)
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/48039dc8-4142-4685-be74-b35fa1ca0ac1" alt="Route53 도메인 관리" style="max-width: 100%; height: auto;">
+  <img src="https://github.com/user-attachments/assets/68a001b6-e5e5-40ee-97c3-37f0d71875cd" alt="보안성 구현" style="max-width: 100%; height: auto;">
 </div>
 
-**Nginx Controller 기반의 라우팅**
+#### 🛡️ 네트워크 보안
+- **Private Subnet**: 모든 워커 노드를 Private 환경에 배치
+- **Bastion Host**: SSH 접근을 위한 안전한 게이트웨이
+- **보안 그룹**: 세밀한 포트 및 프로토콜 기반 접근 제어
 
-**도메인 기반 라우팅**
-- dev 네임스페이스와 prod 네임스페이스를 나누어 **개발환경과 운영환경을 분리**하고, 이를 위하여 todaktodak.site 또는 dev.todaktodak.site **도메인 기반의 라우팅**을 적용 하였습니다.
+#### 🔐 데이터 보안
+- **AWS Secrets Manager**: 중요한 환경변수 및 DB 크리덴셜 안전 관리
+- **Let's Encrypt**: SSL/TLS 인증서 자동 발급 및 갱신
 
-**경로 기반 라우팅**
-- /api 경로와 그 외 경로에 대해서 **경로 기반 라우팅**을 적용하여, Frontend와 Backend로 가는 트래픽을 분리하였습니다.
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/3071b6a5-80ae-4bf9-98ba-3e5e8f949a3b" alt="라우팅 구조" style="max-width: 700px; height: auto;">
-</div>
-
-**모니터링 시스템 구축**
-
-Prometeous+Grafana 스택을 활용하여 쿠버네티스의 Pod들의 리소스 사용량과 Node의 **리소스 사용량을 시각화** 하고, 특정 리소스 Threshold 기준에 따라 이메일 또는 메신저에 **경고**가 갈 수 있도록 하였습니다.
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/a836bb27-3802-480a-9f5f-910d07712a2c" alt="모니터링 시스템" style="max-width: 100%; height: auto;">
-</div>
-
-## → 😮 Issues and Limitations
-
-### Issues
-
-**EKS Load Balancer 접근 불규칙 문제(보안 그룹 설정 이슈)**
-
-**이슈:** Terraform으로 구축한 AWS EKS에 Loadbalancer를 통하여 서비스에 접근 하려고 하니 **접근이 불규칙적**으로 됬다가 안됬다가 하는 문제 발생하였습니다.
-
-**해결 과정 1:** 로드 밸런서가 인스턴스의 **노드포트**로 접근 할 때, 서비스가 있는 노드에 접근 할 경우 접근되고 아닐 경우에는 노드에 있는 **kube-proxy**가 타겟 서비스로 **트래픽을 전달하는 과정에서 문제**가 있다고 판단.
-
-그래서 파드 간의 네트워크 개념인 CNI가 문제가 있다고 판단하였고, AWS EKS에 적용된 AWS VPC CNI 설정 관련해서 구글링. 찾은 방법 중 그럴 듯한 방법 중 하나로 AWS VPC CNI에 역할을 기반으로 OIDC 자격 증명 공급자와 CNI 관련 IAM 정책을 연결 해주어야 CNI 관련 쿠버네티스 리소스가 CNI 작업하는데 필요한 AWS 리소스 접근 권한을 획득해 작업이 가능하다고 하여 블로그 글 참고하여 트러블 슈팅 진행.
-→ but 실패.
-
-**해결 과정 2:** 개발에서 다양한 계층적 테스트(단위 테스트, 모듈 테스트, 통합 테스트)를 통해 트러블 슈팅하는 것으로부터 착안하여 EKS 노드 그룹의 노드에 접근 가능한 VPC Public Subnet에 있는 **Bastion Host Instance를 구축**하여 이 호스트로 **실제 노드에 SSH로 접근**하여 다양한 테스트 진행
-- curl 명령어를 통해서 외부 인터넷 접근 시 접근 불가 문제 발견 → 노드 그룹의 OutBound 보안그룹 설정 해서 해결
-- curl 명령어를 통해서 NodePort 서비스에 접근 시 불규칙한 접근 문제 발생 → 노드 그룹 끼리의 InBound 보안 그룹 설정을 통해서 해결
-
-**정리:** 근본적인 문제는 Terraform 코드를 통해서 **보안 그룹을 설정 했지만** 보안 그룹 관련 설정하는 코드가 오류를 띄우는 것이 아니라 무시되면서 **보안 그룹이 제대로 설정 되지 않았고**, 이슈의 원인을 찾는 과정에서 보안 그룹 문제는 당연히 잘 되었을거라고 가정해서 트러블 슈팅 기간이 길어졌습니다. 그래서 이 경험을 통해 확실하다고 생각하는 것에 대해서 의심하고, 생성형AI 가 작성 해준 코드를 다듬는 것은 꼭 필요하고 **공식 문서**를 꼭 참고 하자라는 교훈을 얻게 되었습니다.
-
-**Postgresql RDS 스냅샷 복원 시 타임아웃 이슈**
-
-**이슈:** 적절하게 **퍼블릭 액세스 허용 설정**이랑 **보안 그룹을 설정**했음에도(인바운드 5432 허용) 외부에서 db에 연결하려니까 타임아웃 이슈 발생
-
-**해결 과정:** RDS에서는 다중 AZ 모드나 네트워크 자원이 모자랄 경우를 대비하여 서브넷 그룹이라는 개념을 활용하고, **디폴트 서브넷 그룹**이 해당 vpc의 **모든 서브넷**이기 때문에 RDS 가 **프라이빗 서브넷에 생성이 된다면** 퍼블릭 접근 모드라 하더라도 접근이 안됨. 때문에 외부 접근 허용 여부에 따라 서브넷 그룹의 요소를 public할꺼면 public요소들만 private 할꺼면 private 요소들만 하는 식으로 커스텀 구성이 필요하는 것을 알게 되었습니다.
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/2aea1a5f-10d8-49a0-80c4-977efa629667" alt="RDS 서브넷 설정" style="max-width: 100%; height: auto;">
-</div>
-
-### Limitations
-
-**CI/CD 도구 관련 보안 이슈**
-- CI/CD 도구로 Github Action을 사용하였고, 이로 인하여 AWS EKS의 **API Server를 Public**으로 설정하였습니다. 이는 누구나 API 서버에 접근 가능하므로 보안상 좋지 못하다고 생각이 들었습니다.
-- 때문에 향후에 Private 하게 사용할 수 있는 Jenkins CI/CD 서버를 활용하고 이를 프로젝트 VPC에 띄우면, AWS EKS의 API 서버 또한 private 하게 설정하여 보안성을 높일 수 있을 것으로 생각합니다.
-
-**모니터링 경고 기능의 한계**
-- 모니터링의 경고 방식으로 **Grafana Alerting 기능**을 활용하였는데, 이는 시각화 패널을 기반으로 간단한 경고만 설정 가능합니다.
-- 대규모 마이크로서비스, 클라우드 네이티브 인프라와 같은 복잡한 메트릭 기반 경고와 고급 알림 관리를 필요로 하는 환경을 대비해 향후에 Prometeous AlertManager 도구를 활용 해볼 계획입니다.
-
-**IaC 관리의 한계**
-- **Terraform**을 통해 대부분의 리소스를 관리하였지만, AWS Secret Manager와 관련된 리소스 부분에서 **종속성 문제**(순환 참조)가 발생 하였고, RDS와 Cache(Elasticache)의 경우에는 **GUI 콘솔**을 활용하였기 때문에 리소스를 올리거나 내리는 과정에서 **수동작업**과 순차적으로 **3번 배포**하는 방식의 **차선책**을 적용하였고, 이에 대해서 **더 좋은 IaC관리 방식**을 적용 해보지 못한 부분이 아쉬웠습니다.
-
-## → 😊 Achieve
-
-해당 프로젝트를 통하여 **클라우드 네이티브 기반**으로 개발과 운영을 통합하는 **DevOps** 개념을 적용 해볼 수 있었습니다.
-
-**CI/CD 도구**를 통해 개발 내용을 **빠르게 운영에 적용**하고, **IaC 도구**를 활용해 **인프라를 코드로 관리**하고 운영에 빠르게 적용하며, **모니터링 도구**를 통해 운영에 문제가 생겼을 시 개발 및 인프라에 **바로 피드백**을 줄 수 있는 환경을 구성해 보았고 이는 현 시대에서 **Agile 개발 방식**과 **MSA 기술**이 대두되고 있는 상황에서 저의 IT 역량을 한층 업그레이드 시켜준 값진 경험 이였습니다.
-
-뿐만 아니라, 쿠버네티스라는 **컨테이너 인프라 기술**을 비용에 대한 걱정 없이 프로젝트에 적용 해 볼 수 있었다는 점 또한 매우 값지게 만들어준 요인이라고 생각합니다.
+#### ⚡ 성능 최적화
+- **RDS Read Replica**: 읽기 전용 복제본을 활용해서, Master-Slave 구조로 쓰기-읽기를 분리하여 DB 부하 분산
+- **CloudFront CDN**: S3 기반 글로벌 컨텐츠 캐싱
+- **S3 Presigned URL**: 서버 부하 감소를 위한 직접 다운로드
 
 ---
 
-## 포트폴리오 내용 링크
+## 🔧 기술 스택
 
-https://celestial-snapdragon-a9f.notion.site/SNS-165deab51b4b80098c7aeeae544331ac
+### ☁️ Cloud Platform
+| 서비스 | 용도 | 특징 |
+|--------|------|------|
+| **AWS EKS** | Kubernetes 관리 | 완전 관리형 컨테이너 오케스트레이션 |
+| **AWS RDS** | PostgreSQL DB | Multi-AZ, Read Replica 지원 |
+| **AWS S3** | 객체 스토리지 | 99.999999999% 내구성 |
+| **CloudFront** | CDN | 글로벌 엣지 캐싱 |
+| **Route53** | DNS 관리 | 고가용성 DNS 서비스 |
+| **Secrets Manager** | 보안 관리 | 자동 크리덴셜 로테이션 |
+
+### 🐳 Container & Orchestration
+- **Kubernetes**: 컨테이너 오케스트레이션
+- **Docker**: 컨테이너화
+- **Helm Charts**: Kubernetes 패키지 관리
+
+### 🔄 CI/CD & IaC
+- **GitHub Actions**: CI/CD 파이프라인
+- **Terraform**: Infrastructure as Code
+- **GHCR**: 컨테이너 레지스트리
+
+### 📊 Monitoring & Observability
+- **Prometheus**: 메트릭 수집 및 저장
+- **Grafana**: 시각화 및 대시보드
+
+### 💾 Database & Storage
+- **PostgreSQL RDS**: 
+  - Multi-AZ 배포로 고가용성 확보
+  - Read Replica로 읽기 성능 향상
+- **ElastiCache Redis**: 세션 관리 및 캐싱
+- **S3 Object Storage**: 사용자 업로드 파일 및 AI 생성 컨텐츠
+
+---
+
+## 🚨 주요 이슈 및 해결 과정
+
+### 1. 🔍 EKS Load Balancer 접근 불규칙 문제
+
+#### 문제 상황
+로드밸런서를 통한 서비스 접근이 **간헐적으로 실패**하는 현상 발생
+
+#### 해결 과정
+
+**1차 시도: CNI 네트워크 문제로 가정**
+- AWS VPC CNI 설정 및 OIDC 자격 증명 설정
+- IAM 정책 연결 시도
+- **결과**: 문제 지속 → 다른 원인 탐색 필요
+
+**2차 시도: 체계적 디버깅 접근**
+- Bastion Host 구축하여 실제 노드에 직접 접근
+- curl 명령어로 단계별 연결성 테스트
+- **발견**: 노드 간 통신 및 외부 인터넷 접근 문제
+
+**최종 해결**
+- 노드 그룹 OutBound 보안 그룹 설정: 외부 인터넷 접근 허용
+- 노드 간 InBound 보안 그룹 설정: 클러스터 내부 통신 허용
+
+#### 핵심 교훈
+> **"확실하다고 생각하는 것도 의심하라"**
+> 
+> Terraform 코드가 오류 없이 실행되었다고 해서 모든 설정이 정상적으로 적용되었다고 가정하면 안 된다. 항상 **공식 문서 참조**와 **단계별 검증**이 필요하다.
+
+### 2. 🗄️ PostgreSQL RDS 접근 타임아웃 이슈
+
+#### 문제 상황
+- 퍼블릭 액세스 허용 설정 ✅
+- 보안 그룹 5432 포트 허용 ✅  
+- 하지만 외부에서 DB 연결 시 **타임아웃 발생** ❌
+
+#### 원인 분석
+RDS의 **서브넷 그룹** 개념 이해 부족:
+- 기본 서브넷 그룹은 VPC의 **모든 서브넷** 포함
+- RDS가 Private Subnet에 생성되면 퍼블릭 접근 모드여도 접근 불가
+
+#### 해결 방법
+**커스텀 서브넷 그룹** 생성:
+- 퍼블릭 접근이 필요한 경우: Public Subnet만 포함
+- 내부 접근만 필요한 경우: Private Subnet만 포함
+
+---
+
+## 🚀 개선사항
+
+### 🔒 보안 강화
+**목표**: EKS API Server Private 전환
+- Jenkins CI/CD 서버를 VPC 내부 구축
+- GitHub Actions 대신 Private Jenkins 활용
+
+### 📊 모니터링 고도화
+**목표**: 엔터프라이즈급 관찰 가능성 구현
+- 복잡한 메트릭 기반 경고 시스템 구축
+- **로그 중앙화** (ELK Stack) 구현
+
+### 🛠️ IaC 완전성
+**목표**: 100% 코드 기반 인프라 관리
+- AWS Secrets Manager 종속성 문제 해결
+- RDS, ElastiCache Terraform 완전 통합
+
+### 🔄 DevOps 문화 확산
+- **테스트 자동화** 강화
+- **카나리 배포** 및 **블루-그린 배포** 전략 적용
+
+---
+
+## 💭 프로젝트 회고
+
+이 프로젝트를 통해 **현대적인 클라우드 네이티브 기술 스택**을 활용한 확장 가능하고 안정적인 인프라를 구축할 수 있었습니다. 단순히 기술 스택을 사용하는 것을 넘어서, **왜 이 기술이 필요한지, 어떤 문제를 해결하는지**에 대한 깊은 이해를 얻었습니다. 특히 실제 운영 환경에서 발생할 수 있는 다양한 이슈들을 직접 경험하고 해결하면서, **문제 해결 능력과 시스템 사고력**을 크게 향상시킬 수 있었습니다.
+
+---
